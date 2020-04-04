@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package org.gravel.grpc;
+
+message Response{
+  string response = 1;
+}
+
+message Request{
+  string request = 1;
+}
+
+service AuthorService{
+  rpc getMessage(Request) returns (Response);
+}
